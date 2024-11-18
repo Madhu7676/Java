@@ -1,0 +1,57 @@
+SOURCE CODE: JTabbedPane
+  import javax.swing.*;  
+    public class TabbedPaneExample {  
+    JFrame f;  
+    TabbedPaneExample(){  
+        f=new JFrame();  
+        JTextArea ta=new JTextArea(200,200);  
+        JPanel p1=new JPanel();  
+        p1.add(ta);  
+        JPanel p2=new JPanel();  
+        JPanel p3=new JPanel();  
+        JTabbedPane tp=new JTabbedPane();  
+        tp.setBounds(50,50,200,200);  
+        tp.add("main",p1);  
+        tp.add("visit",p2);  
+        tp.add("help",p3);    
+        f.add(tp);  
+        f.setSize(400,400);  
+        f.setLayout(null);  
+        f.setVisible(true);  
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }  
+    public static void main(String[] args) {  
+        new TabbedPaneExample();  
+    }  }  
+
+13 b)SOURCE CODE: JScrollPane
+import java.awt.*;    
+    import javax.swing.*;    
+    public class ScrollEx
+   {    
+        JFrame f;    
+        ScrollEx()
+       {    
+        f=new JFrame();   
+        JPanel jp=new JPanel() ;
+        jp.setLayout(new GridLayout(20,20)) ;
+        for(int i=0;i<20;i++)
+        for(int j=0;j<20;j++)   
+        {  
+         jp.add(new JButton("Button "+j));
+        }
+        //int v=ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED;
+       //int h=ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED;
+        //JScrollPane js=new JScrollPane(jp,v,h);
+        JScrollPane js=new JScrollPane(jp);
+        f.add(js,BorderLayout.CENTER);
+        f.setSize(300,400);    
+        f.setVisible(true);    
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        }     
+        public static void main(String[] args) 
+       {    
+        new ScrollEx();    
+       }    
+  }  
+
